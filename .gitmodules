@@ -1,4 +1,4 @@
-[submodule "gentoo/theme"]
-	path = gentoo/theme
-	url = https://github.com/Ryogo-Z/twrp_monochrome_portrait_hdpi_theme/
+[submodule "vision6/theme"]
+	path = vision6/theme
+	url = https://github.com/Ryogo-X/twrp_monochrome_portrait_hdpi_theme.git
 	branch = master

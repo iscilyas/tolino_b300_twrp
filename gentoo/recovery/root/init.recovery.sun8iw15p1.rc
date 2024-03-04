@@ -1,4 +1,0 @@
-on init
-    insmod /gt82x.ko
-    insmod /sunxi-keyboard.ko
-    insmod /disp.ko
