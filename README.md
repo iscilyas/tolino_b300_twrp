@@ -26,6 +26,8 @@ Not possible, `fastboot boot <path_to_recovery_image>` is not working on this de
 if everything is successful you should find built recovery at path `twrp-8.1/out/target/product/vision6/recovery.img`
 
 ## Credits
-Thanks to [Ryogo-X](https://github.com/Ryogo-X) for Nook Glowlight 4 twrp port on which this is heavily based: https://github.com/Ryogo-X/nook_gentoo_twrp.git
+Thanks to [Ryogo-X](https://github.com/Ryogo-X) for Nook Glowlight 4 twrp port on which this is heavily based: https://github.com/Ryogo-X/nook_gentoo_twrp.git   
+
 Thanks to [Morxi](https://github.com/Morxi) for twrp base: https://github.com/Morxi/twrp_devices_allwinner_b300  
+
 Thanks to [NiLuJe](https://github.com/NiLuJe) for [FBInk](https://github.com/NiLuJe/FBInk)
