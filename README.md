@@ -23,7 +23,7 @@ Not possible, `fastboot boot <path_to_recovery_image>` is not working on this de
 8. `lunch omni_vision6-userdebug`
 9. `mka recoveryimage`
 
-if everything is successful you should find built recovery at path twrp-8.1/out/target/product/vision6/recovery.img
+if everything is successful you should find built recovery at path `twrp-8.1/out/target/product/vision6/recovery.img`
 
 ## Credits
 Thanks to [Ryogo-X](https://github.com/Ryogo-X) for Nook Glowlight 4 twrp port on which this is heavily based: https://github.com/Ryogo-X/nook_gentoo_twrp.git
