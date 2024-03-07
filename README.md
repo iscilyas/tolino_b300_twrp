@@ -1,18 +1,63 @@
+vim:ft=markdown
+
 # TWRP for Tolino Vision6
 ### State
 TWRP builds and is fully functional (hopefully).
 
 ### Test without installation
-Not possible, `fastboot boot <path_to_recovery_image>` is not working on this device :(
+Not possible, `fastboot boot recovery.img` is not working on this device :(
 
-### Entering recovery
-1) Enable adb on device
-2) `adb reboot recovery`
+## How to Install
+### Enable adb on device
+For tolino firmware version 16.x.y "search" for `112358132fb`.
+
+NOTE: See instructions for "Enable Debug-Menu Settings" here https://gist.github.com/hasezoey/d16ba0f980f00cd2193132afe4714c7c?permalink_comment_id=4672374
+
+Verify that `adb` is enabled by typing in your terminal:
+
+`adb devices`
+
+There should be a bunch of numbers (the serial number) and the name of the device in the output.
+
+### Download TWRP
+Download `recovery.img` from the "releases" link on this page
+
+### Enter Fastboot Mode on Device
+
+In your terminal type:
+
+`adb reboot bootloader`
+
+Device will appear to be off. Verify that it is in fastboot mode by typing:
+
+`fastboot devices`
+
+ Output should be something like:
+
+`Android Fastboot       Android Fastboot`
+
 ### Installation
-1) enter fastboot;
-2) in cmd do `fastboot flash recovery <path_to_recovery_image>`
 
-### How to build TWRP
+Open your terminal in the directory where you downloaded `recovery.img` and type:
+
+`fastboot flash recovery recovery.img`
+
+This should take 5-10 seconds. Afterwards reboot into regular system by typing:
+
+`fastboot reboot`
+
+NB: `fastboot reboot recovery` doesn't seem to be working. So we'll reboot into regular android and then go into recovery from there.
+
+### Entering recovery (TWRP)
+
+Type the following to boot into TWRP:
+
+`adb reboot recovery`
+
+You're done!
+
+## Building TWRP (only if you want to do your own build of TWRP)
+
 1. `repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1`
 2. `repo sync -n -j 1 && repo sync -l -j 4`
 3. `clone this repo to twrp-8.1/device/tolino`
