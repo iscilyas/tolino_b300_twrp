@@ -2,3 +2,6 @@
 	path = vision6/theme
 	url = https://github.com/Ryogo-X/twrp_monochrome_portrait_hdpi_theme.git
 	branch = master
+[submodule "epos3/theme"]
+	path = epos3/theme
+	url = https://github.com/Ryogo-X/twrp_monochrome_portrait_hdpi_theme.git
