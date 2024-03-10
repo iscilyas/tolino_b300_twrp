@@ -46,6 +46,7 @@ RECOVERY_SDCARD_ON_DATA := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := selinux=1 androidboot.selinux=permissive buildvariant=user
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x02000000
