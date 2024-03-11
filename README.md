@@ -20,9 +20,13 @@ Verify that `adb` is enabled by typing in your terminal:
 There should be a bunch of numbers (the serial number) and the name of the device in the output.
 
 ### Download TWRP
-1. Download `twrp-vision6.img`, `twrp-shine4.img` or `twrp-epos3.img` from the "releases" link on this page.
+1. Depending on your device, download one of:   
+       `twrp-vision6.img`   
+       `twrp-shine4.img`   
+       `twrp-epos3.img`   
+   from the "releases" link on this page.
 
-2. Rename downloaded file to `twrp.img`
+3. Rename downloaded file to `twrp.img`
 
 ### Enter Fastboot Mode on Device
 
@@ -62,22 +66,28 @@ You're done!
 
 Download `theme-material-light.zip` from `releases`, rename it to `ui.zip` and put it in `/sdcard/TWRP/theme` (create the directory if it doesn't exist).
 
-## Building TWRP (only if you want to do your own build of TWRP)
+## Building TWRP (Optional: only if you want to compile it yourself)
 
 1. `repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1`
 2. `repo sync -n -j 1 && repo sync -l -j 4`
-3. `clone this repo to twrp-8.1/device/tolino`
+3. clone this repo to `twrp-8.1/device/tolino`
 4. apply patches from `twrp-8.1/device/tolino/patches` directory
 5. open terminal in `twrp-8.1` directory;
 6. `export LC_ALL=C`
 7. `. build/envsetup.sh`
-8. `lunch omni_vision6-userdebug` for tolino vision 6, `lunch omni_shine4-userdebug` for tolino shine 4 or `lunch omni_epos3-userdebug` for tolino epos 3
-9. `mka recoveryimage`
-
-if everything is successful you should find built recovery at path `twrp-8.1/out/target/product/vision6/recovery.img` or `twrp-8.1/out/target/product/shine4/recovery.img` or `twrp-8.1/out/target/product/epos3/recovery.img`
+8. `lunch omni_vision6-userdebug` for tolino vision 6,  
+   `lunch omni_shine4-userdebug` for tolino shine 4  
+   `lunch omni_epos3-userdebug` for tolino epos 3
+9. `mka recoveryimage` to build
+10. if everything is successful you should find built recovery at path  
+    `twrp-8.1/out/target/product/vision6/recovery.img`  
+     or  
+     `twrp-8.1/out/target/product/shine4/recovery.img`  
+     or  
+     `twrp-8.1/out/target/product/epos3/recovery.img`
 
 ## Credits
-Thanks to [Ryogo-X](https://github.com/Ryogo-X) for Nook Glowlight 4 twrp port on which this is heavily based: https://github.com/Ryogo-X/nook_gentoo_twrp.git   
+Thanks to [Ryogo-X](https://github.com/Ryogo-X) for Nook Glowlight 4 twrp port on which this is heavily based: https://github.com/Ryogo-X/nook_gentoo_twrp   
 
 Thanks to [Morxi](https://github.com/Morxi) for twrp base: https://github.com/Morxi/twrp_devices_allwinner_b300  
 
