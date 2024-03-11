@@ -70,11 +70,14 @@ TARGET_SCREEN_WIDTH := 1264
 # Screen
 TW_NO_SCREEN_TIMEOUT := true
 TW_NO_SCREEN_BLANK := true
+TW_DEFAULT_BRIGHTNESS := 25
+TW_ROTATION := 90
 
 # Touch
 RECOVERY_TOUCHSCREEN_SWAP_XY := true
 RECOVERY_TOUCHSCREEN_FLIP_Y := true
-TW_IGNORE_MAJOR_AXIS_0 := true
+#TW_IGNORE_MAJOR_AXIS_0 := true
+TW_NO_HAPTICS := true
 
 # EINK
 TW_AW_EINK := true
@@ -82,7 +85,7 @@ TW_AW_EINK_A2 := true
 
 #THEME
 TW_THEME := portrait_hdpi
-TW_CUSTOM_THEME := $(if $(wildcard $(DEVICE_PATH)/theme),$(DEVICE_PATH)/theme)
+#TW_CUSTOM_THEME := $(if $(wildcard $(DEVICE_PATH)/theme),$(DEVICE_PATH)/theme)
 
 #MISC
 TW_EXCLUDE_SUPERSU := true

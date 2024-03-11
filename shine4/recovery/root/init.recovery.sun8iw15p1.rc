@@ -1,0 +1,13 @@
+on init
+    insmod /gt82x.ko
+    insmod /sunxi-keyboard.ko
+    insmod /disp.ko
+    chmod 0777 /ntx_hwconfig-static
+    chmod 0777 /vendor/bin/ntx_hwconfig-static
+    chmod 0777 /enable_adb.sh
+    chmod 0777 /disable_adb.sh
+    mkdir -p /cache/recovery
+    chmod 0777 /cache/recovery
+    chmod 0777 /dev/block/mmcblk0
+    chmod 0777 /dev/block/mmcblk0p1
+    chmod 0777 /dev/block/mmcblk0p5

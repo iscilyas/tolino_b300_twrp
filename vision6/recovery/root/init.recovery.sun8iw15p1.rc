@@ -1,3 +1,5 @@
+import /init.${ro.hardware}.usb.rc
+
 on init
     insmod /gt82x.ko
     insmod /sunxi-keyboard.ko

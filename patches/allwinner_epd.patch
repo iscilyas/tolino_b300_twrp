@@ -193,8 +193,8 @@ index fc5fcf3..51f8773 100644
 +	const uint32_t xres = vi.xres;
 +	const uint32_t yres = vi.yres;
 +    
-+    vi.xres = yres;
-+    vi.yres = xres;
++    //vi.xres = yres;
++    //vi.yres = xres;
 +
 +	vi.xres_virtual = vi.xres;
 +	vi.yres_virtual = vi.yres;
@@ -209,7 +209,7 @@ index fc5fcf3..51f8773 100644
 +
 +    epdCtx.disp_fd = fd;
 +    
-+    epdCtx.rota = 90U;
++    epdCtx.rota = 0U;
 +
 +    epdCtx.layer.info.mode        = LAYER_MODE_BUFFER;
 +    epdCtx.layer.info.zorder      = 0U;
